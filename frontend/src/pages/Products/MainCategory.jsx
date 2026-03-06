@@ -5,6 +5,7 @@ import { getService } from "../../service/axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/homePageComp/Navbar";
 import Footer from "../../components/homePageComp/Footer";
+import { Helmet } from "react-helmet-async";
 
 const HERO_IMAGE =
   "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&q=80&w=2000";
@@ -257,7 +258,65 @@ const GlobalPortal = () => {
           .gp-grid { grid-template-columns: 1fr; }
         }
       `}</style>
+      <Helmet>
+        {/* Primary SEO */}
+        <title>
+          Import Export Products Categories | VR & Sons Global Trade
+        </title>
 
+        <meta
+          name="description"
+          content="Explore product categories offered by VR & Sons Import Export. We supply high-quality products across 13+ countries with reliable global trade services."
+        />
+
+        <meta
+          name="keywords"
+          content="import export products, global trade categories, export products India, VR and Sons export company, international trade products"
+        />
+
+        <meta name="author" content="VR & Sons Import Export" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Canonical URL */}
+        <link
+          rel="canonical"
+          href="https://www.vrandsons.com/products"
+        />
+
+        {/* Open Graph (Facebook / LinkedIn SEO) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Import Export Product Categories | VR & Sons"
+        />
+        <meta
+          property="og:description"
+          content="Browse global export product categories from VR & Sons. Trusted international trading partner exporting to 13+ countries."
+        />
+        <meta
+          property="og:image"
+          content="https://images.unsplash.com/photo-1494412651409-8963ce7935a7"
+        />
+        <meta
+          property="og:url"
+          content="https://www.vrandsons.com/products"
+        />
+
+        {/* Twitter SEO */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Import Export Categories | VR & Sons Global Trade"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover export product categories from VR & Sons serving global markets."
+        />
+        <meta
+          name="twitter:image"
+          content="https://images.unsplash.com/photo-1494412651409-8963ce7935a7"
+        />
+      </Helmet>
       <div className="gp">
         <Navbar />
 
